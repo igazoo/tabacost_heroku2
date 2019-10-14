@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tabacost</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+<% end %>
+
+ <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+      <div class="container">
+        <%= link_to root_path do %>
+        <% end %>
+        <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
+            
+              <%= link_to histories_path do %>
+                <%= image_tag "tabaco.jpg",class: "path-btn" %>
+              <% end %>
+              
+           <%= link_to histories_index_path do %>
+                <%= image_tag "list.png",class:"path-btn" %>
+              <% end %>
+            
+            <li>
+              <%= link_to logout_path, method: :delete do %>
+                <%= image_tag "logout.png" %>
+              <% end %>
+            </li>
+         
+        <% end %>
+          
+        
+        </ul>
+      </div>
+    </nav>
+
+
+
+          
+        
+    </nav>
+    <%= yield %>
+    <script>
+  $(function(){
+    $(".alert").fadeOut(5000);
+  });
+</script>
+  </body>
+</html>

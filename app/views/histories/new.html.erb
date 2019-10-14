@@ -1,0 +1,18 @@
+<div class="history-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-3 users-new-container">
+        
+        <%= form_for @history do |f| %>
+          
+          
+          
+           <h1 class="text-center text-white">please push</h1>
+        <%= link_to "購入", histories_path, class: 'btn-block btn-white' ,method: :post %>
+        <%= link_to "取り消し", histories_path, class: 'btn-block btn-white' , method: :delete %>
+      
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

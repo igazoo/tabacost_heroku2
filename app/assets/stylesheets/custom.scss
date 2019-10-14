@@ -1,0 +1,161 @@
+h1, h2 {
+  font-weight: 1000;
+  
+  
+}
+
+.text-white {
+  color: #440000;
+  
+  
+  
+  
+  
+}
+
+.btn-white {
+  color: #440000		;
+  border: 1px solid #440000		;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+  font-weight: 1000;
+  
+
+  &:hover {
+    color: #00f	;
+  }
+}
+
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('tabacoimage.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+  background-color: #464646;
+}
+
+.top-hero-container {
+  padding-top: 220px;
+  padding-right: 500px;
+  h1 {
+    font-size: 56px;
+    
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+}
+
+.form-control {
+  height: 45px;
+  
+}
+
+.users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url('img_68d7464c4be450c89dc8ad95c1c2f88d208564.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  
+  
+  
+  
+
+
+  .users-new-container {
+    padding-top: 220px;
+    padding-right: 150px;
+    
+  
+    .form-group {
+      margin-bottom: 20px;
+      
+      
+    }
+  }
+}
+
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+.navbar-transparent {
+  margin-bottom: 0px;
+  background-color: rgba(0,0,0,0.5);
+  a {
+    color: #fff !important;
+  }
+
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 15px;
+  }
+
+  img {
+    height: 40px;
+  
+  }
+  .path-btn{
+    margin-top: 15px;
+    margin-right: 5px;
+  }
+
+}
+
+
+.history-new-wrapper{
+  margin-top : 300px;
+  text-align: center;
+  
+}
+
+.histories-index{
+  float: left;
+  margin-top: 200px;
+  margin-left: 300px;
+  padding-top: 100px;
+}
+
+.tabaco-name{
+  font-size: 20px;
+}
+.brand{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.histories-index{
+  height: 100vh;
+  margin-top: 20px;
+}
+
+.graf{
+  float: left;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+.data{
+  text-align: center;
+  
+}
+.data h5{
+  font-size: 50px;
+  margin-bottom: 100px;
+  
+}
