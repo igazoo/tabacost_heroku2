@@ -1,32 +1,5 @@
 class HistoriesController < ApplicationController
   def index
-    array1=[]
-    #日ごとのデータを取得
-    array1=current_user.histories.all.map{ |history| history.created_at.day }
-    
-    logger.debug(array1)
-    #重複しているものを数える（同じ日のデータを配列にする）
-    dayArray = array1.group_by(&:itself)
-    #logger.debug(["★dayArray"=>dayArray])
-    #logger.debug(["★array1"=>array1.inspect])
-    #1日のデータをまとめて各日のデータを連想配列に入れる
-    dayList = {}
-      
-    dayArray.each do |k,v|
-      dayList[k] = v.count
-    end
-    
-    @chart1= dayList
-    array2=[]
-    array2=current_user.histories.all.map{ |history| history.created_at.month } 
-  
-    dayArray = array2.group_by(&:itself)
-  
-    monthList = {}
-      
-    dayArray.each do |k,v|
-      monthList[k] = v.count
-    end
     
     
     histories = current_user.histories.all
@@ -52,35 +25,29 @@ class HistoriesController < ApplicationController
       logger.debug(['push'=>h.created_at])
     end
     logger.debug('---------------------------------------------')
+    @chart1=data
     
-    data.each_with_index do |d,i|
-      logger.debug(["data[#{i}]"=>d])
-    end
-    logger.debug('---------------------------------------------')
-    logger.debug(['data'=>data])
-
     
-    @chart2= monthList
-  end
   
-  
-  def index2
-    histories = current_user.histories.all
-    day_count = histories.first.created_at
-    histories_in_a_week = Array.new
-    data = Array.new
     
-    histories.each do |h|
-      if h.created_at < day_count + 7
-        histories_in_a_week.push(h)
-      else
-        day_count += 7
-        data.push(histories_in_a_week)
-        histories_in_a_week.clear
-      end
+    
+    array=[]
+    array=current_user.histories.all.map{ |history| history.created_at.month } 
+  
+    dayArray = array.group_by(&:itself)
+  
+    monthList = {}
+      
+    dayArray.each do |k,v|
+      monthList[k] = v.count
     end
-    logger.debug(['★data'=>data])
+    
+     @chart2= monthList
+ 
   end
+    
+   
+  
   
    def new
        
