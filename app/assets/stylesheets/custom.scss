@@ -22,6 +22,7 @@ h1, h2 {
   background-color: rgba(0,0,0,0.0);
   font-weight: 1000;
   
+  
 
   &:hover {
     color: #00f	;
@@ -143,10 +144,11 @@ h1, h2 {
 .histories-index{
   height: 100vh;
   margin-top: 20px;
+  text-align: center;
 }
 
 .graf{
-  float: left;
+ float: left;
   margin-right: 100px;
   margin-bottom: 100px;
 }
@@ -157,5 +159,7 @@ h1, h2 {
 .data h5{
   font-size: 50px;
   margin-bottom: 100px;
+  text-align: center;
+
   
 }

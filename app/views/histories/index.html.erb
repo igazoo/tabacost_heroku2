@@ -1,19 +1,16 @@
 
 <div class="histories-index">
   <div class="data">
-      <h5>Data Report</h5>
+    <h5 class="col-md-offset-2 col-md-4">Data Report</h5>
+    <div class="graf">
+      <%= column_chart @chart1,width: "600px" %>
+      week
+    </div>
+    <div class="graf">
+      <%= column_chart @chart2 %>
+      Month
+    </div>
   </div>
-    
-  <div class="graf">
-    <%= column_chart @chart1 %>
-    Week
-  </div>
-  <div class="graf">
-    <%= column_chart @chart2 %>
-    Month
-  </div>
-  
-  
 </div>
 
 	

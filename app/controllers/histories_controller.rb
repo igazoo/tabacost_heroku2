@@ -1,36 +1,10 @@
 class HistoriesController < ApplicationController
   def index
+    @chart1 = History.analytics(:weekly)
     
-    
-    histories = current_user.histories.all
-    day_count = histories.first.created_at
-    
-    #二次元配列の初期化
-    tmp = Array.new
-    data = Array.new
-    data.push(tmp)
-    
-    i = 0
-    
+    logger.debug(@chart1)
 
-    histories.each do |h|
-      if h.created_at > day_count + 1.week
-        logger.debug('---------------------１週間---------------------')
-        #debugger
-        day_count = day_count + 1.week
-        i += 1
-        data.push(Array.new)
-      end
-      data[i].push(h.created_at)
-      logger.debug(['push'=>h.created_at])
-    end
-    logger.debug('---------------------------------------------')
-    @chart1=data
-    
-    
-  
-    
-    
+
     array=[]
     array=current_user.histories.all.map{ |history| history.created_at.month } 
   
@@ -47,7 +21,6 @@ class HistoriesController < ApplicationController
   end
     
    
-  
   
    def new
        
