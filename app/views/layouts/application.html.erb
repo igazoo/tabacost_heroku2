@@ -13,9 +13,6 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-  <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
-<% end %>
 
  <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
@@ -32,7 +29,7 @@
                 <%= image_tag "list.png",class:"path-btn" %>
               <% end %>
               
-              <%= link_to histories_calendar_path do %>
+              <%= link_to calenders_index_path do %>
                 <%= image_tag "calendar.png",class:"path-btn" %>
               <% end %>
               
@@ -44,22 +41,21 @@
             </li>
          
         <% end %>
-          
-        
         </ul>
       </div>
+        <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+    <% end %>
     </nav>
-
-
-
-          
-        
+    
+  
     </nav>
+    
     <%= yield %>
     <script>
-  $(function(){
-    $(".alert").fadeOut(5000);
-  });
-</script>
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
+    </script>
   </body>
 </html>

@@ -7,6 +7,7 @@ class HistoriesController < ApplicationController
 
     array=[]
     array=current_user.histories.all.map{ |history| history.created_at.month } 
+    
   
     dayArray = array.group_by(&:itself)
   
@@ -20,10 +21,7 @@ class HistoriesController < ApplicationController
  
   end
     
-  def calendar 
-    @histories = History.all
-  end
-  
+ 
   def new
        
     @history = History.new

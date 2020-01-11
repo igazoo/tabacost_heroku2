@@ -9,8 +9,7 @@ Rails.application.routes.draw do
   
   root "pages#index"
   resources :users,:except =>[:index,  :show]
-  get "/histories/calendar", to:"histories#calendar"
-
+  get 'calenders/index'
   get    '/login', to: 'sessions#new'
   post   '/login', to: "sessions#create"
   delete '/logout',to: 'sessions#destroy'
