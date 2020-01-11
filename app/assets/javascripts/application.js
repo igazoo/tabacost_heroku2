@@ -13,9 +13,19 @@
 //= require jquery
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require bootstrap-sprockets
+//= require moment 
+//= require fullcalendar 
 //= require_tree .
 //= require Chart.bundle
 //= require chartkick
 
+$(function () {
+
+  
+   $('#calendar').fullCalendar({
+  
+  });
+
+
+});

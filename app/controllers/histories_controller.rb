@@ -20,13 +20,15 @@ class HistoriesController < ApplicationController
  
   end
     
-   
+  def calendar 
+    @histories = History.all
+  end
   
-   def new
+  def new
        
     @history = History.new
   
-   end
+  end
   
   def create
       @history= History.new(user_id:current_user.id, tabaco_id:current_user.tabaco.id,price:current_user.tabaco.price, volume:current_user.tabaco.volume,

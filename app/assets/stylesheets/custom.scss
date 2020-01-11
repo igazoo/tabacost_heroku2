@@ -1,3 +1,12 @@
+@media screen and (max-width: 100vw) {
+ 
+img{
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+ 
+
 h1, h2 {
   font-weight: 1000;
   
@@ -6,11 +15,7 @@ h1, h2 {
 
 .text-white {
   color: #440000;
-  
-  
-  
-  
-  
+ 
 }
 
 .btn-white {
@@ -32,6 +37,7 @@ h1, h2 {
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
+  overflow: scroll;
   background-image: url('tabacoimage.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -43,6 +49,8 @@ h1, h2 {
 
 .top-hero-container {
   padding-top: 220px;
+  height: 100vh;
+
   padding-right: 500px;
   h1 {
     font-size: 56px;
@@ -64,26 +72,20 @@ h1, h2 {
 .users-new-wrapper {
   width: 100vw;
   height: 100vh;
+  overflow:scroll;
   background-image: image-url('img_68d7464c4be450c89dc8ad95c1c2f88d208564.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
-  
-  
-  
-  
-
 
   .users-new-container {
-    padding-top: 220px;
+    padding-top: 100px;
     padding-right: 150px;
-    
   
     .form-group {
       margin-bottom: 20px;
-      
       
     }
   }
@@ -162,4 +164,6 @@ h1, h2 {
   text-align: center;
 
   
+}
+
 }

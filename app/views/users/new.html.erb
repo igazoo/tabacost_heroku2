@@ -17,17 +17,11 @@
             <%= f.label :password_confirmation, class: 'text-white' %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
-          
-          
           <%= f.label :tabaco_id,class: 'tabaco-name'  %>
           <div class="brand">
           <%= f.collection_select(:tabaco_id, Tabaco.all, :id, :brand)  %>
           </div>
-            
-          
-         
-          
-          
+     
           <%= f.submit "登録", class: 'btn-block btn-white' %>
         
         <% end %>

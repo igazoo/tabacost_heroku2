@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   validates :name, presence: true,
-                   length: {minimum:5,maximum:10}
+                   length: {minimum:3,maximum:10}
                    
   has_secure_password
   
