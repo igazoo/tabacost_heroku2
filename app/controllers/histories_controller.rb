@@ -18,7 +18,13 @@ class HistoriesController < ApplicationController
     end
     
      @chart2= monthList
- 
+      logger.debug(@chart2)
+  end
+  
+  
+  def calendar
+    @histories = History.all
+    logger.debug(@histories)
   end
     
  
@@ -29,8 +35,11 @@ class HistoriesController < ApplicationController
   end
   
   def create
+    require 'date'
       @history= History.new(user_id:current_user.id, tabaco_id:current_user.tabaco.id,price:current_user.tabaco.price, volume:current_user.tabaco.volume,
-                            brand:current_user.tabaco.brand)
+                            brand:current_user.tabaco.brand,started_at:Date.today,end_date:Date.today)
+      @event = Event.create(title: @history.brand,description:"",start_date:@history.started_at,end_date:@history.end_date)
+      
     if   @history.save
       redirect_to histories_path,success: "購入しました"
     else

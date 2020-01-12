@@ -129,12 +129,7 @@ h1, h2 {
   
 }
 
-.histories-index{
-  float: left;
-  margin-top: 200px;
-  margin-left: 300px;
-  padding-top: 100px;
-}
+
 
 .tabaco-name{
   font-size: 20px;
@@ -145,29 +140,43 @@ h1, h2 {
 }
 
 .histories-index{
+  width: 100vw;
   height: 100vh;
-  margin-top: 20px;
-  text-align: center;
+  overflow: scroll;
 }
 
-.graf{
- float: left;
-  margin-right: 100px;
-  margin-bottom: 100px;
-}
+
 .data{
   text-align: center;
+  margin-top: 100px;
+  
   
 }
 .data h5{
   font-size: 50px;
   margin-bottom: 100px;
   text-align: center;
-
   
 }
-
+.graf{
+  
 }
+.graf1{
+  width: 500px auto;
+  height: 150px;
+  float: left;
+  margin-left: 300px;
+}
+
+.graf2{
+  width: 500px auto;
+  height: 100px;
+  float: left;
+  margin-left: 150px;
+}
+
+
+
 
 #calendar{
   width: 50%;
@@ -175,4 +184,5 @@ h1, h2 {
   text-align: center;
   margin: 0 auto;
   margin-top: 100px;
+}
 }

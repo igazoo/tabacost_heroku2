@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :events
  get '/histories/index', to: 'histories#index'
   
   get 'sessions/new'
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   
   root "pages#index"
   resources :users,:except =>[:index,  :show]
-  get 'calenders/index'
+  get 'histories/calendar',to: 'histories#calendar'
   get    '/login', to: 'sessions#new'
   post   '/login', to: "sessions#create"
   delete '/logout',to: 'sessions#destroy'
