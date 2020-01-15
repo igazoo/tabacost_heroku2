@@ -1,24 +1,15 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @event.end_date %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<div class = "tabaco_wrapper">
+  <div class="tabaco_container">
+    <p id="notice"><%= notice %></p>
+    <div class="tabaco_name">
+      <p>銘柄
+        <%= @event.title %>
+      </p>
+    </div>
+    <div class="edit_btn">
+      <p><%= link_to "削除" ,event_path(@event), method: :delete  %></p>
+      <p><%= link_to 'Back', events_path %></p>
+    </div>
+  </div>
+</div>

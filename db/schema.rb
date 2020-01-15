@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2020_01_12_061006) do
 
-  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "start_date"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_01_12_061006) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "histories", force: :cascade do |t|
     t.integer "user_id"
     t.integer "tabaco_id"
     t.integer "price"
@@ -33,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_01_12_061006) do
     t.datetime "end_date"
   end
 
-  create_table "tabacos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "tabacos", force: :cascade do |t|
     t.string "brand"
     t.integer "price"
     t.integer "volume"
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_01_12_061006) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.integer "tabaco_id"
     t.datetime "created_at", null: false

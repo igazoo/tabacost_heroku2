@@ -1,21 +1,21 @@
 @media screen and (max-width: 100vw) {
- 
+
 img{
 max-width: 100%;
 height: auto;
 width /***/:auto;
 }
- 
+
 
 h1, h2 {
   font-weight: 1000;
-  
-  
+
+
 }
 
 .text-white {
   color: #440000;
- 
+
 }
 
 .btn-white {
@@ -26,8 +26,8 @@ h1, h2 {
   font-size: 20px;
   background-color: rgba(0,0,0,0.0);
   font-weight: 1000;
-  
-  
+
+
 
   &:hover {
     color: #00f	;
@@ -43,7 +43,7 @@ h1, h2 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  
+
   background-color: #464646;
 }
 
@@ -54,7 +54,7 @@ h1, h2 {
   padding-right: 500px;
   h1 {
     font-size: 56px;
-    
+
     margin-bottom: 50px;
   }
 
@@ -66,7 +66,7 @@ h1, h2 {
 
 .form-control {
   height: 45px;
-  
+
 }
 
 .users-new-wrapper {
@@ -83,10 +83,10 @@ h1, h2 {
   .users-new-container {
     padding-top: 100px;
     padding-right: 150px;
-  
+
     .form-group {
       margin-bottom: 20px;
-      
+
     }
   }
 }
@@ -112,7 +112,7 @@ h1, h2 {
 
   img {
     height: 40px;
-  
+
   }
   .path-btn{
     margin-top: 15px;
@@ -125,8 +125,8 @@ h1, h2 {
 .history-new-wrapper{
   margin-top : 250px;
   text-align: center;
-  
-  
+
+
 }
 
 
@@ -149,17 +149,17 @@ h1, h2 {
 .data{
   text-align: center;
   margin-top: 100px;
-  
-  
+
+
 }
 .data h5{
   font-size: 50px;
   margin-bottom: 100px;
   text-align: center;
-  
+
 }
 .graf{
-  
+
 }
 .graf1{
   width: 500px auto;
@@ -184,5 +184,22 @@ h1, h2 {
   text-align: center;
   margin: 0 auto;
   margin-top: 100px;
+}
+
+.tabaco_wrapper{
+  text-align: center;
+  width: 30vw;
+  height: 30vh;
+  font-size: 30px;
+  background-color: #808080;
+  position: relative;
+  margin: 0;
+  top: 100px;
+  left: 100px;
+
+}
+.tabaco_container{
+  padding-top : 20px;
+  color: #fff;
 }
 }
