@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tabacost</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Tabacost</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- inital scale -->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!-- inital scale -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
- <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
-      <div class="container">
-        <%= link_to root_path do %>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+    <div class="container">
+      <%= link_to root_path do %>
+      <% end %>
+      <ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>
+
+        <%= link_to histories_path do %>
+        <%= image_tag "tabaco.jpg",class: "path-btn" %>
         <% end %>
-        <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
-            
-              <%= link_to histories_path do %>
-                <%= image_tag "tabaco.jpg",class: "path-btn" %>
-              <% end %>
-              
-              <%= link_to histories_index_path do %>
-                <%= image_tag "list.png",class:"path-btn" %>
-              <% end %>
-              
-              <%= link_to events_path do %>
-                <%= image_tag "calendar.png",class:"path-btn" %>
-              <% end %>
-              
-            
-            <li>
-              <%= link_to logout_path, method: :delete do %>
-                <%= image_tag "logout.png" %>
-              <% end %>
-            </li>
-         
+
+        <%= link_to histories_index_path do %>
+        <%= image_tag "list.png",class:"path-btn" %>
         <% end %>
-        </ul>
-      </div>
-        <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+
+        <%= link_to events_path do %>
+        <%= image_tag "calendar.png",class:"path-btn" %>
+        <% end %>
+
+
+        <li>
+          <%= link_to logout_path, method: :delete do %>
+          <%= image_tag "logout.png" %>
+          <% end %>
+        </li>
+
+        <% end %>
+      </ul>
+    </div>
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
-    </nav>
-    
-  
-    </nav>
-    
-    <%= yield %>
-    <script>
-      $(function(){
-        $(".alert").fadeOut(5000);
-      });
-    </script>
-  </body>
+  </nav>
+
+
+</nav>
+
+<%= yield %>
+<script>
+  $(function(){
+    $(".alert").fadeOut(5000);
+  });
+</script>
+</body>
 </html>

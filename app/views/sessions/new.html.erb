@@ -4,19 +4,15 @@
       <div class="col-md-offset-2 col-md-4 users-new-container">
         <h1 class="text-center text-white">Log in</h1>
         <%= form_for :session, url: login_path do |f| %>
-        
-          <div class="form-group">
-            <%= f.label :name, class: 'text-white' %>
-            <%= f.text_field :name, class: 'form-control' %>
-          </div>
-       
-          <div class="form-group">
-            <%= f.label :password, class: "text-white" %>
-            <%= f.password_field :password, class: "form-control" %>
-          </div>
-          
-          <%= f.submit "ログイン", class: "btn-block btn-white" %>
-          
+        <div class="form-group">
+          <%= f.label :name, class: 'text-white' %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password, class: "text-white" %>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+        <%= f.submit "ログイン", class: "btn-block btn-white" %>
         <% end %>
         <%= link_to '新規登録はこちら', new_user_path,class: 'text-white' %>
       </div>

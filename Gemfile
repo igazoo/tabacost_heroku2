@@ -76,5 +76,3 @@ gem "chartkick"
 gem 'chartable'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
-
-
